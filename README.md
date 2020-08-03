@@ -42,6 +42,13 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
   - Đưa bức ảnh về 2 màu sử dụng thuật toán K-means
   - Chuyển ảnh thành màu xám.
   - Xử dụng thuật toán Canny để tìm cạnh
+  
+<img src="https://i.imgur.com/xwPDg30.png"><img src="https://i.imgur.com/n2nfmmd.png">
+<img src="https://i.imgur.com/EpTKWqe.png"><img src="https://i.imgur.com/B2Dg2Tm.png">
+<img src="https://i.imgur.com/XQMM0Qr.png"><img src="https://i.imgur.com/KooV5nv.png">
+<img src="https://i.imgur.com/ghea90W.png"><img src="https://i.imgur.com/li8OxGy.png">
+<img src="https://i.imgur.com/usETDBE.png"><img src="https://i.imgur.com/HD0iNku.png">
+
 ### IV. CÁC MODEL SỬ DỤNG ĐỂ TRAIN 
 #### 1. Random Forest Classifier
 - Đây là phương pháp xây dựng một tập hợp rất nhiều cây quyết định và sử dụng phương pháp voting để đưa ra quyết định về biến target cần được dự báo. 
