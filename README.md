@@ -19,13 +19,20 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 - Định dạng tên tệp: `<tên quả>_<chỉ số>.jpg` - Ví dụ: cachua_1.jpg
 - Tỉ lệ train/test size: Có 3 tỉ lệ được sử dụng trong bài để đánh giá: 80/20, 75/25, 70/30.
 ### III. CÁC KĨ THUẬT XỬ LÍ DATA
-- *Chúng mình xử dụng 2 phương pháp tách biệt để xử lí data và training model đó là dựa trên màu sắc và cạnh*
+- *Chúng mình sử dụng 2 phương pháp tách biệt để xử lí data và training model đó là dựa trên màu sắc và cạnh*
 #### 1. Xử lí data dựa trên màu của bức ảnh
 - Resize ảnh về size 200x200
 - Đưa bức ảnh về 2 màu sử dụng thuật toán K-means
 - Loại bỏ màu sáng hơn của bức ảnh (Màu sáng hơn là màu nền, nên loại bỏ)
 - Chia nhỏ bức ảnh thành 25 section (40x40)
 - Tính trung bình và độ lệch chuẩn cho cả bức ảnh và cho từng section 40x40
+
+<img src="https://i.imgur.com/iKcdC3k.png"><img src="https://i.imgur.com/UaKw9ZY.png">
+<img src="https://i.imgur.com/jPHzXXh.png"><img src="https://i.imgur.com/QXKUhEC.png">
+<img src="https://i.imgur.com/UM2I7CV.png"><img src="https://i.imgur.com/GtArom6.png">
+<img src="https://i.imgur.com/iEf8cjY.png"><img src="https://i.imgur.com/nHLbRJV.png">
+<img src="https://i.imgur.com/sRVs5Mi.png"><img src="https://i.imgur.com/1GQlA2j.png">
+
 #### 2. Xử lí data bằng kĩ thuật tìm cạnh
 - Resize ảnh về size 200x200
 - Cách 1:
@@ -35,9 +42,10 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
   - Đưa bức ảnh về 2 màu sử dụng thuật toán K-means
   - Chuyển ảnh thành màu xám.
   - Xử dụng thuật toán Canny để tìm cạnh
-### IV. CÁC MODEL XỬ DỤNG ĐỂ TRAIN 
-#### 1. Random forests1
-- Đây là phương pháp xây dựng một tập hợp rất nhiều cây quyết định và sử dụng phương pháp voting để đưa ra quyết định về biến target cần được dự báo. Một ví dụ về Random Forest như sau: 
-  - Giả sử bạn muốn đi tham quan du lịch Anh và có sự cân nhắc cho việc tham quan thành phố nào như: Manchester, Liverpool hay Birmingham. Để trả lời câu hỏi này bạn sẽ cần tham khảo rất nhiều ý kiến từ bạn bè, blog du lịch, tour lữ hành … Mỗi một ý kiến tương ứng với một Decision Tree trả lời các câu hỏi như: thành phố này đẹp không, có được tham quan các sân vận động khi đến thăm không, số tiền bỏ ra là bao nhiêu, thời gian để tham quan thành phố là bao lâu… Sau đó bạn sẽ có một rừng các câu trả lời để quyết định xem mình sẽ đi tham quan thành phố nào. Random Forest hoạt động bằng cách đánh giá các Decision Tree sử dụng cách thức voting để đưa ra kết quả cuối cùng.
-#### 2. SVC 
--
+### IV. CÁC MODEL SỬ DỤNG ĐỂ TRAIN 
+#### 1. Random Forest Classifier
+- Đây là phương pháp xây dựng một tập hợp rất nhiều cây quyết định và sử dụng phương pháp voting để đưa ra quyết định về biến target cần được dự báo. 
+- Tìm hiểu thêm về [Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=random%20forest#sklearn.ensemble.RandomForestClassifier)
+#### 2. SVC - Support Vector Classification
+- Áp dụng thuật toán dựa trên libsvm (thư viện svm). Thời gian tính toán ít nhất bằng bậc 2 của số lượng samples và có thể không thể áp dụng với số lượng samples vượt quá 10000
+- Tìm hiểu thêm về [Support Vector Classification](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html?highlight=svc#sklearn.svm.SVC)
