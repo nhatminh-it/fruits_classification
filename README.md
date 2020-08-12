@@ -90,6 +90,17 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 
 <img src="https://i.imgur.com/FOQ05xg.png">
 
+#### Hướng dẫn sử dụng
+- fruits_data: folfer chứa data.
+- model: folder chứa các model đã train.
+- output_input: data đã được chia thủ công và đọc thành file csv.
+- valid data: Bộ data thực tế để kiểm tra model.
+- Extract_Color.ipynb: Trích xuất đặc trưng màu.
+- Extract_Edge.ipynb: Trích xuất đặc trưng cạnh.
+- eval_cluster_color.ipynb: Đánh giá model với 2 hướng xử lí màu.
+- eval_edgecluster_model.ipynb: Đánh giá model với 2 hướng xử lí cạnh.
+- Final_model_FruitClassification.ipynb: Model hoàn chỉnh khi kết hợp 2 phương pháp cạnh và màu.
+- Fruits_classify_app.ipynb: App cho người dùng test model.
 
 
 
