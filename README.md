@@ -26,8 +26,8 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 - Loại bỏ màu sáng hơn của bức ảnh (Màu sáng hơn thường là màu nền, nên loại bỏ).
 - Chia nhỏ bức ảnh thành 25 section (40x40).
 - Tính trung bình và độ lệch chuẩn cho:
-    - Ba chanel màu
-    - Cho từng section 
+    - Hướng thứ nhất: Ba chanel màu
+    - Hướng thứ hai: Cho từng section 
 
 <img src="https://i.imgur.com/iKcdC3k.png"><img src="https://i.imgur.com/UaKw9ZY.png">
 <img src="https://i.imgur.com/jPHzXXh.png"><img src="https://i.imgur.com/QXKUhEC.png">
@@ -40,10 +40,12 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 - Hướng thứ nhất: 
   - Đưa bức ảnh về 2 màu sử dụng thuật toán K-means.
   - Xử dụng thuật toán Canny để tìm cạnh.
-  - Tính trung bình và độ lệch chuẩn cho bức ảnh.
+  - Chia nhỏ bức ảnh thành 25 section (40x40).
+  - Tính trung bình và độ lệch chuẩn cho từng section.
 - Hướng thứ hai:
   - Xử dụng thuật toán Canny để tìm cạnh.
-  - Tính trung bình và độ lệch chuẩn cho bức ảnh.
+  - Chia nhỏ bức ảnh thành 25 section (40x40).
+  - Tính trung bình và độ lệch chuẩn cho từng section.
  
 <img src="https://i.imgur.com/xwPDg30.png"><img src="https://i.imgur.com/n2nfmmd.png">
 <img src="https://i.imgur.com/EpTKWqe.png"><img src="https://i.imgur.com/B2Dg2Tm.png">
@@ -61,20 +63,34 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 ### V. KẾT QUẢ ĐÁNH GIÁ
 - Thực hiện các model machine learning đối với 4 hướng tiếp cận:
   - Sử dụng trung bình và độ lệch chuẩn cho từng lớp RGB của ảnh đã cluster: 
-  # Đang chỉnh sửa .....
   
-  <img src="https://i.imgur.com/xwPDg30.png">
+  <img src="https://i.imgur.com/PMEp04P.png">
   
   - Sử dụng trung bình và độ lệch chuẩn cho toàn ảnh đã được cluster về 2 màu với các section 40 x 40 pixels:
   
-  <img src="https://i.imgur.com/xwPDg30.png">
+  <img src="https://i.imgur.com/vWKmf4j.png">
   
   - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels của từng section 40 x 40 với ảnh gốc được xử lý về canny edge:
   
-  <img src="https://i.imgur.com/xwPDg30.png">
+  <img src="https://i.imgur.com/qKdPBTp.png">
   
   - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels của từng section 40 x 40 với ảnh đã được cluster chỉ còn 2 màu và được xử lý về canny edge:
   
-  <img src="https://i.imgur.com/xwPDg30.png">
+  <img src="https://i.imgur.com/nyK4ES2.png">
   
-  # Đang chỉnh sửa .....
+### VI. KẾT LUẬN
+- Sau khi đã có kết quả đánh giá sơ bộ, nhóm quyết định sử dụng kết hợp 2 trên 4 phương pháp ở trên:
+    - Xử lí màu: Hướng thứ nhất
+    - Xứ lí cạnh: Hướng thứ nhất 
+- Kết quả:
+
+<img src="https://i.imgur.com/mPrzEtp.png">
+
+- Kết quả trên bộ valid data:
+
+<img src="https://i.imgur.com/FOQ05xg.png">
+
+
+
+
+
