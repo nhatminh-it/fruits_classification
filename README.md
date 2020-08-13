@@ -20,13 +20,13 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 - Tỉ lệ train/test size: 75/25
 ### III. CÁC KĨ THUẬT XỬ LÍ DATA
 - *Chúng mình sử dụng 2 phương pháp tách biệt để xử lí data và training model đó là dựa trên màu sắc và cạnh. Sau đó kết hợp lại với nhau để train model.*
-#### 1. Xử lí data dựa trên màu của bức ảnh
+#### 1. Xử lý data dựa trên màu của bức ảnh
 - Resize ảnh về size 200x200.
 - Đưa bức ảnh về 2 màu sử dụng thuật toán K-means.
 - Loại bỏ màu sáng hơn của bức ảnh (Màu sáng hơn thường là màu nền, nên loại bỏ).
 - Chia nhỏ bức ảnh thành 25 section (40x40).
 - Tính trung bình và độ lệch chuẩn cho:
-    - Hướng thứ nhất: Ba chanel màu
+    - Hướng thứ nhất: Từng chanel màu trong 3 channel màu RGB
     - Hướng thứ hai: Cho từng section 
 
 <img src="https://i.imgur.com/iKcdC3k.png"><img src="https://i.imgur.com/UaKw9ZY.png">
@@ -35,15 +35,15 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 <img src="https://i.imgur.com/iEf8cjY.png"><img src="https://i.imgur.com/nHLbRJV.png">
 <img src="https://i.imgur.com/sRVs5Mi.png"><img src="https://i.imgur.com/1GQlA2j.png">
 
-#### 2. Xử lí data bằng kĩ thuật tìm cạnh
+#### 2. Xử lý data bằng kĩ thuật tìm cạnh
 - Resize ảnh về size 200x200.
 - Hướng thứ nhất: 
   - Đưa bức ảnh về 2 màu sử dụng thuật toán K-means.
-  - Xử dụng thuật toán Canny để tìm cạnh.
+  - Sử dụng thuật toán Canny để tìm cạnh.
   - Chia nhỏ bức ảnh thành 25 section (40x40).
   - Tính trung bình và độ lệch chuẩn cho từng section.
 - Hướng thứ hai:
-  - Xử dụng thuật toán Canny để tìm cạnh.
+  - Sử dụng thuật toán Canny để tìm cạnh.
   - Chia nhỏ bức ảnh thành 25 section (40x40).
   - Tính trung bình và độ lệch chuẩn cho từng section.
  
@@ -80,8 +80,8 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
   
 ### VI. KẾT LUẬN
 - Sau khi đã có kết quả đánh giá sơ bộ, nhóm quyết định sử dụng kết hợp 2 trên 4 phương pháp ở trên:
-    - Xử lí màu: Hướng thứ nhất
-    - Xứ lí cạnh: Hướng thứ nhất 
+    - Xử lý màu: Hướng thứ nhất
+    - Xứ lý cạnh: Hướng thứ nhất 
 - Kết quả:
 
 <img src="https://i.imgur.com/mPrzEtp.png">
