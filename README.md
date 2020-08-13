@@ -26,7 +26,7 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 - Loại bỏ màu sáng hơn của bức ảnh (Màu sáng hơn thường là màu nền, nên loại bỏ).
 - Chia nhỏ bức ảnh thành 25 section (40x40).
 - Tính trung bình và độ lệch chuẩn cho:
-    - Hướng thứ nhất: Từng chanel màu trong 3 channel màu RGB
+    - Hướng thứ nhất: Từng channel màu trong 3 channel màu RGB
     - Hướng thứ hai: Cho từng section 
 
 <img src="https://i.imgur.com/iKcdC3k.png"><img src="https://i.imgur.com/UaKw9ZY.png">
@@ -62,19 +62,19 @@ Bộ dữ liệu được sử dụng trong bài này bao gồm 2500 ảnh. Đư
 - Tìm hiểu thêm về [Support Vector Classification](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html?highlight=svc#sklearn.svm.SVC)
 ### V. KẾT QUẢ ĐÁNH GIÁ
 - Thực hiện các model machine learning đối với 4 hướng tiếp cận:
-  - Sử dụng trung bình và độ lệch chuẩn cho từng lớp RGB của ảnh đã cluster: 
+  - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels cho từng lớp RGB của ảnh đã cluster: 
   
   <img src="https://i.imgur.com/PMEp04P.png">
   
-  - Sử dụng trung bình và độ lệch chuẩn cho toàn ảnh đã được cluster về 2 màu với các section 40 x 40 pixels:
+  - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels cho toàn ảnh đã được cluster về 2 màu với các section 40 x 40 pixels:
   
   <img src="https://i.imgur.com/vWKmf4j.png">
   
-  - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels của từng section 40 x 40 với ảnh gốc được xử lý về canny edge:
+  - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels cho từng section 40 x 40 với ảnh gốc được xử lý về canny edge:
   
   <img src="https://i.imgur.com/qKdPBTp.png">
   
-  - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels của từng section 40 x 40 với ảnh đã được cluster chỉ còn 2 màu và được xử lý về canny edge:
+  - Sử dụng trung bình và độ lệch chuẩn của các giá trị pixels cho từng section 40 x 40 với ảnh đã được cluster chỉ còn 2 màu và xử lý về canny edge:
   
   <img src="https://i.imgur.com/nyK4ES2.png">
   
